@@ -108,7 +108,7 @@ a {
 }
 
 .header .logo {
-  margin-right: 50px;
+  margin-right: 93px;
   padding: 24px 0;
 }
 .main-nav {
@@ -121,7 +121,7 @@ a {
   align-items: center;
 }
 .site-nav .item {
-  margin-left: 30px;
+  margin-left: 50px;
 }
 .site-nav .item:first-child {
   margin-left: 0px;
@@ -165,11 +165,18 @@ a {
 }
 /* Banner  */
 .banner {
+  max-width: 1600px;
   height: 600px;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 200px 0;
+  margin: 0 auto;
 }
 .banner-tittle {
   margin: 0 auto;
@@ -204,11 +211,12 @@ a {
 .function .list {
   display: flex;
 }
-.function .icon-block{
-  padding: 25px 100px;
+.function .icon-block {
+  height: 120px;
   display: flex;
-  text-align: center;justify-content: center;
-  background-color: #F5F4FA;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -272,23 +280,22 @@ a {
   line-height: calc(19 / 16);
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 16px;
 }
 .comands .link {
   fill: #afb1b8;
-  display: block;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   padding: 12px;
 }
 .comands .icon-list {
+  justify-content: center;
   display: flex;
-  justify-content: space-evenly;
-}
-.comands svg {
-  display: flex;
-  align-items: center;
+  gap: 10px;
 }
 .comands .icon-item {
   margin-left: 10px;
-  margin-top: 16px;
 }
 .comands .icon-item:first-child {
   margin-left: 0;
@@ -304,21 +311,29 @@ a {
   display: flex;
 }
 .client .link {
-  display: block;
   fill: #afb1b8;
-}
-.client .item {
-  display: inline-block;
-  width: 170px;
-  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   outline: 1px solid #afb1b8;
   border-radius: 4px;
-  margin-left: 30px;
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 32px;
 }
-.client .item:first-child {
+.client .item {
+  margin-left: 30px;
+  width: 170px;
+  height: 92px;
+}
+.client .link:hover,
+.client .link:focus {
+  fill: var(--accent3-color);
+  outline-color: var(--accent3-color);
+}
+. .client .item:first-child {
   margin-left: 0;
 }
 /* Footer  */
