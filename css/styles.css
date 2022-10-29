@@ -66,6 +66,15 @@ a {
 .current {
   color: var(--accent3-color);
 }
+.current::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid var(--accent3-color);
+  border-radius: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
 .button {
   font-weight: 500;
   font-family: inherit;
@@ -121,6 +130,7 @@ a {
   align-items: center;
 }
 .site-nav .item {
+  position: relative;
   margin-left: 50px;
 }
 .site-nav .item:first-child {
@@ -140,11 +150,8 @@ a {
   align-items: center;
 }
 .contact-list svg {
-  margin-right: 10px;
-}
-.contact-link svg:hover,
-.contact-link svg:focus {
   fill: currentColor;
+  margin-right: 10px;
 }
 .header .contact-link {
   font-weight: 500;
@@ -204,6 +211,50 @@ a {
 .banner .button:focus {
   background-color: #188ce8;
 }
+.banner .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.banner .modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--accent2-color);
+  position: absolute;
+  top: 221px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner .btn {
+  padding: 0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  pointer-events: visible;
+}
+.banner .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Function  */
 .function {
   padding-bottom: 0px;
@@ -238,10 +289,26 @@ a {
 }
 /* About-work  */
 .about-work .list {
+  position: relative;
   display: flex;
 }
 .about-work .item {
+  position: relative;
   margin-left: 30px;
+}
+.about-work .text {
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+  color: var(--accent2-color);
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-work .item:first-child {
   margin-left: 0px;
@@ -283,19 +350,23 @@ a {
   margin-bottom: 16px;
 }
 .comands .link {
+  width: 100%;
+  height: 100%;
   fill: #afb1b8;
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 12px;
+  align-items: center;
+  border-radius: 50%;
 }
 .comands .icon-list {
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .comands .icon-item {
-  margin-left: 10px;
+  width: 44px;
+  height: 44px;
 }
 .comands .icon-item:first-child {
   margin-left: 0;
@@ -303,11 +374,11 @@ a {
 .comands .link:hover,
 .comands .link:focus {
   background-color: var(--accent3-color);
-  border-radius: 50px;
   fill: var(--accent2-color);
 }
 /* Client */
 .client .list {
+  gap: 30px;
   display: flex;
 }
 .client .link {
@@ -317,25 +388,22 @@ a {
   align-items: center;
   height: 100%;
   width: 100%;
-  outline: 1px solid #afb1b8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 32px;
 }
 .client .item {
-  margin-left: 30px;
   width: 170px;
   height: 92px;
 }
 .client .link:hover,
 .client .link:focus {
   fill: var(--accent3-color);
-  outline-color: var(--accent3-color);
+  border-color: var(--accent3-color);
 }
-. .client .item:first-child {
-  margin-left: 0;
-}
+
 /* Footer  */
 .footer {
   padding: 60px 0px;
@@ -440,6 +508,7 @@ a {
   gap: 30px;
 }
 .portfolio-list .item {
+  width: 370px;
   width: calc((100% - 60px) / 3);
   outline: 1px solid #eeeeee;
 }
@@ -455,4 +524,33 @@ a {
 .portfolio-list .text {
   font-size: 16px;
   line-height: calc(30 / 16);
+}
+.portfolio .img-block {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio .text-hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 63px 24px;
+  color: var(--accent2-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  font-size: 18px;
+  line-height: calc(24 / 18);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio .link:hover .text-hover,
+.portfolio .link:focus .text-hover {
+  transform: translateY(-100%);
 }

@@ -9,10 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css?_cacheOverride=1665331896665" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css?_cacheOverride=1665331896665"
+    />
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -62,9 +64,21 @@
       <section class="banner">
         <div class="container">
           <h1 class="banner-tittle">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button" type="button">Замовити послугу</button>
+          <button class="button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="btn" type="button" data-modal-close>
+              <svg class="icon">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
+
       <!-- Особливості -->
       <section class="function section">
         <div class="container">
@@ -72,7 +86,10 @@
           <ul class="list">
             <li class="item">
               <div class="icon-block">
-              <svg class="icon" width="70px" height="70px"><use href="./images/icons.svg#icon-antenna"></use></svg></div>
+                <svg class="icon" width="70px" height="70px">
+                  <use href="./images/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
               <h3 class="function-tittle">Увага до деталей</h3>
               <p class="text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
@@ -80,8 +97,11 @@
               </p>
             </li>
             <li class="item">
-              <div class="icon-block">             
-              <svg class="icon" width="70px" height="70px"><use href="./images/icons.svg#icon-clock"></use></svg></div>
+              <div class="icon-block">
+                <svg class="icon" width="70px" height="70px">
+                  <use href="./images/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
               <h3 class="function-tittle">Пунктуальність</h3>
               <p class="text">
                 Завдання організації, особливо рамки і місце навчання кадрів
@@ -90,15 +110,21 @@
             </li>
             <li class="item">
               <div class="icon-block">
-              <svg class="icon" width="70px" height="70px"><use href="./images/icons.svg#icon-diagram"></use></svg></div>
+                <svg class="icon" width="70px" height="70px">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
               <h3 class="function-tittle">Планування</h3>
               <p class="text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="item ">
+            <li class="item">
               <div class="icon-block">
-              <svg class="icon" width="70px" height="70px"><use href="./images/icons.svg#icon-astronaut"></use></svg></div>
+                <svg class="icon" width="70px" height="70px">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
               <h3 class="function-tittle">Сучасні технології</h3>
               <p class="text">
                 Значимість цих проблем настільки очевидна, що реалізація
@@ -114,19 +140,29 @@
           <h2 class="about-work-tittle section-tittle">Чим ми займаємося</h2>
           <ul class="list">
             <li class="item">
-              <img src="./images/box1.jpg" alt="Програмування" width="370" />
+              <img
+                class="img"
+                src="./images/box1.jpg"
+                alt="Програмування"
+                width="370"
+              />
+              <p class="text">Десктопні додатки</p>
             </li>
             <li class="item">
               <img
                 src="./images/box2.jpg"
                 alt="Створення мобільних додатків"
-                width="370" />
+                width="370"
+              />
+              <p class="text">Мобільні додатки</p>
             </li>
             <li class="item">
               <img
                 src="./images/box3.jpg"
                 alt="Оформлення дизайну"
-                width="370" />
+                width="370"
+              />
+              <p class="text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -140,7 +176,8 @@
               <img
                 src="./images/commands1.jpg"
                 alt="Фото Ігора Дем'яненко"
-                width="270" />
+                width="270"
+              />
               <div class="block">
                 <h3 class="commands-list-tittle">Ігор Дем'яненко</h3>
                 <p class="comands-work text" lang="en">Product Designer</p>
@@ -148,24 +185,27 @@
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use
-                          href="./images/icons.svg#icon-instagram"></use></svg>
-                      </a>
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-twitter"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-facebook"></use></svg></a>
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -174,7 +214,8 @@
               <img
                 src="./images/commands4.jpg"
                 alt="Фото Ольги Рєпіної"
-                width="270" />
+                width="270"
+              />
               <div class="block">
                 <h3 class="commands-list-tittle">Ольга Рєпіна</h3>
                 <p class="comands-work text" lang="en">Frontend Developer</p>
@@ -183,22 +224,27 @@
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
                         <use
-                          href="./images/icons.svg#icon-instagram"></use></svg></a>
+                          href="./images/icons.svg#icon-instagram"
+                        ></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-twitter"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-facebook"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-linkedin"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -207,7 +253,8 @@
               <img
                 src="./images/commands3.jpg"
                 alt="Фото Микола Тарасова"
-                width="270" />
+                width="270"
+              />
               <div class="block">
                 <h3 class="commands-list-tittle">Микола Тарасов</h3>
                 <p class="comands-work text" lang="en">Marketing</p>
@@ -216,22 +263,27 @@
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
                         <use
-                          href="./images/icons.svg#icon-instagram"></use></svg></a>
+                          href="./images/icons.svg#icon-instagram"
+                        ></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-twitter"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-facebook"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-linkedin"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -240,7 +292,8 @@
               <img
                 src="./images/commands2.jpg"
                 alt="Фото Михайла Єрмаков"
-                width="270" />
+                width="270"
+              />
               <div class="block">
                 <h3 class="commands-list-tittle">Михайло Єрмаков</h3>
                 <p class="comands-work text" lang="en">UI Designer</p>
@@ -249,22 +302,27 @@
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
                         <use
-                          href="./images/icons.svg#icon-instagram"></use></svg></a>
+                          href="./images/icons.svg#icon-instagram"
+                        ></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-twitter"></use></svg></a>
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-facebook"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
                   </li>
                   <li class="icon-item">
                     <a class="link" href=""
                       ><svg class="icon" width="20px" height="20px">
-                        <use href="./images/icons.svg#icon-linkedin"></use></svg ></a>
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -276,12 +334,48 @@
         <div class="container">
           <h2 class="section-tittle">Постійні клієнти</h2>
           <ul class="list">
-            <li class="item icon-group1"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client1"></use></svg> </a></li>
-            <li class="item icon-group2"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client2"></use></svg> </a></li>
-            <li class="item icon-group3"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client3"></use></svg> </a></li>
-            <li class="item icon-group4"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client4"></use></svg> </a></li>
-            <li class="item icon-group5"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client5"></use></svg> </a></li>
-            <li class="item icon-group6"><a class="link" href=""><svg width="106px" height="60px"><use href="./images/icons.svg#icon-client6"></use></svg> </a></li>
+            <li class="item icon-group1">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item icon-group2">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item icon-group3">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item icon-group4">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item icon-group5">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item icon-group6">
+              <a class="link" href=""
+                ><svg width="106px" height="60px">
+                  <use href="./images/icons.svg#icon-client6"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -327,26 +421,31 @@
             <li class="icon-item">
               <a class="link" href=""
                 ><svg class="icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-instagram"></use></svg></a>
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
             </li>
             <li class="icon-item">
               <a class="link" href=""
                 ><svg class="icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-twitter"></use></svg ></a>
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
             </li>
             <li class="icon-item">
               <a class="link" href=""
                 ><svg class="icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-facebook"></use></svg></a>
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
             </li>
             <li class="icon-item">
               <a class="link" href=""
                 ><svg class="icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-linkedin"></use></svg></a>
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="./modal.js"></script>
   </body>
 </html>
