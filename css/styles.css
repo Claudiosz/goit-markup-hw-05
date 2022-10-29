@@ -161,7 +161,6 @@ a {
   display: flex;
   align-items: center;
   color: var(--accent4-color);
-  fill: currentColor;
   line-height: calc(16 / 14);
 }
 .contact-list .item {
@@ -181,6 +180,7 @@ a {
     url(../images/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
+
   text-align: center;
   padding: 200px 0;
   margin: 0 auto;
