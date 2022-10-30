@@ -557,9 +557,6 @@ a {
   background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: calc(24 / 18);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   cursor: pointer;
 }
